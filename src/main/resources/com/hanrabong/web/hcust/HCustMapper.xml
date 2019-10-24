@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hanrabong.web.hcust.HCustMapper">
+    <select id="selectById"  resultType="HCust">
+        select CID,CPW 
+        from HCUST
+        where CID like #{cid} and CPW like #{cpw}
+       
+    </select>
+    <insert id="insertHCust" parameterType="HCust">
+        insert into HCUST (cid, cpw,cnum) values (
+            #{cid}, #{cpw},#{cnum}
+        )
+    </insert>
+<select id="existId" parameterType="HCust" resultType="int">
+select COUNT(CID)
+from HCUST
+where CID like #{cid}
+</select>
+ 
+
+</mapper>

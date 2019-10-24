@@ -1,6 +1,5 @@
 package com.hanrabong.web.hcust;
 
-import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 
