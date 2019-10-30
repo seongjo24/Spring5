@@ -4,14 +4,14 @@
 
 <mapper namespace="com.hanrabong.web.hcust.HCustMapper">
     <select id="selectById"  resultType="HCust">
-        select CID,CPW 
+        select CID,CPW,CNAME 
         from HCUST
         where CID like #{cid} and CPW like #{cpw}
        
     </select>
     <insert id="insertHCust" parameterType="HCust">
-        insert into HCUST (cid, cpw,cnum) values (
-            #{cid}, #{cpw},#{cnum}
+        insert into HCUST (cid, cpw,cnum,cname) values (
+            #{cid}, #{cpw},#{cnum},#{cname}
         )
     </insert>
 <select id="existId" parameterType="HCust" resultType="int">

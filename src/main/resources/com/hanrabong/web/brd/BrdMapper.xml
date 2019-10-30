@@ -1,0 +1,36 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hanrabong.web.brd.BrdMapper">
+	<insert id="insertArticle" parameterType="Brd">
+		insert into BRD (writer,content,title,brdseq) values(
+		#{writer},#{content},#{title},#{brdseq}
+		)
+	</insert>
+
+	<select id="view" parameterType="Brd" resultType="Brd">
+		select TITLE,BRDSEQ,WRITER,CONTENT
+		from BRD
+		where BRDSEQ like #{brdseq}
+	</select>
+	<select id="brdCount" resultType="int">
+		SELECT COUNT(BRDSEQ)
+		FROM BRD
+
+	</select>
+	<update id="updateBrd" parameterType="Brd">
+		UPDATE BRD
+		SET WRITER=#{writer},TITLE=#{title},CONTENT =#{content}
+		WHERE BRDSEQ =#{brdseq}
+	</update>
+	<delete id="deleteBrd" parameterType="Brd">
+		DELETE FROM BRD
+		WHERE BRDSEQ=#{brdseq}
+	</delete>
+	<update id="updateNum" parameterType="Brd">
+		UPDATE BRD
+		SET BRDSEQ =BRDSEQ-1
+		WHERE BRDSEQ>#{brdseq}
+	</update>
+</mapper>
