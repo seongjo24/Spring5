@@ -300,12 +300,14 @@ auth_vue={
 			'    <div class="checkbox mb-3">'+
 			'      <label>'+
 			'        <a id="a_go_join" href="#">GO JOIN</a>'+
+			'      </label><br>'+
+			'	<label>'+
+			'        <a id="admin" href="#">관리자모드</a>'+
 			'      </label>'+
 			'    </div>'+
 			'    <div id="btn_login"></div>'+
 			'    <p class="mt-5 mb-3 text-muted">© 2017-2019</p>'+
 			'  </form>'
-		
 		},
 		mypage_head:()=>{return'<head>'+
 			'    <meta charset="utf-8">'+
@@ -314,9 +316,7 @@ auth_vue={
 			'    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">'+
 			'    <meta name="generator" content="Jekyll v3.8.5">'+
 			'    <title>Starter Template · Bootstrap</title>'+
-
 			'    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">'+
-
 			'    <!-- Bootstrap core CSS -->'+
 			'<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">'+
 			'    <style>'+
@@ -328,7 +328,6 @@ auth_vue={
 			'        -ms-user-select: none;'+
 			'        user-select: none;'+
 			'      }'+
-
 			'      @media (min-width: 768px) {'+
 			'        .bd-placeholder-img-lg {'+
 			'          font-size: 3.5rem;'+
@@ -345,7 +344,6 @@ auth_vue={
 			'  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">'+
 			'    <span class="navbar-toggler-icon"></span>'+
 			'  </button>'+
-
 			'  <div class="collapse navbar-collapse" id="navbarsExampleDefault">'+
 			'    <ul class="navbar-nav mr-auto">'+
 			'      <li class="nav-item active">'+
@@ -372,16 +370,12 @@ auth_vue={
 			'    </form>'+
 			'  </div>'+
 			'</nav>'+
-
 			'<main role="main" class="container">'+
-
 			'  <div class="starter-template">'+
 			'    <h1>my page</h1>'+
 			'    <p class="lead">id:'+d.cid+'<br> coustomer no.:'+d.cnum+'</p>'+
 			'  </div>'+
-
 			'</main><!-- /.container -->'+
-			
 			'</body>'
 			      }
 		

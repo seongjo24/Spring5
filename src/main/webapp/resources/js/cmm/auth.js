@@ -1,13 +1,14 @@
 "use strict"
 var auth=auth||{};
 auth =((x)=>{
-	let _, js,authvue,brdjs,cookie_js;
+	let _, js,authvue,brdjs,cookie_js,adminjs;
 	let init =()=>{
 		_='/web';
 		js=_+'/resources/js';
 		authvue=js+'/vue/auth_vue.js'
 		brdjs=js+'/brd/brd.js'
 		cookie_js=js+'/cmm/cookie.js'
+		adminjs=js+'/admin/admin.js'
 	}
 	let onCreate =()=>{
 		init();
@@ -15,6 +16,7 @@ auth =((x)=>{
 		$.getScript(cookie_js)
 		$.getScript(authvue).done(()=>{
 			setContentView()
+			$('#admin').click(()=>{access()})
 			$('#a_go_join').click(()=>{
 				$('head')
 				.html(auth_vue.join_head())
@@ -136,6 +138,11 @@ auth =((x)=>{
 		$('body')
 		.html(auth_vue.mypage_body(d))
 		
+	}
+	let access=()=>{
+		$.getScript(adminjs).done(()=>{
+			admin.onCreate()
+		})
 	}
 	return{onCreate ,join ,login}
 })();

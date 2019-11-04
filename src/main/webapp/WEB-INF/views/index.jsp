@@ -12,6 +12,7 @@
    <script src = "<%=application.getContextPath()%>/resources/js/cmm/router.js"></script>
     <script src = "<%=application.getContextPath()%>/resources/js/cmm/auth.js"></script>
     <script src = "<%=application.getContextPath()%>/resources/js/cmm/info.js"></script>
+    <script src = "<%=application.getContextPath()%>/resources/js/cmm/proxy.js"></script>
 <script>
 	app.run('<%=application.getContextPath() %>');
 </script>

@@ -59,7 +59,7 @@ brd=((x)=>{
 			$('#brdText2').append('<h2>새로운 글이 있습니다</h2>')
 		}
 		let write=()=>{
-			
+			$('#admin_table').remove()
 			$.when($('#main')
 					.html(brd_vue.brd_write())).done(
 					$('#write_form input[name=writer]').val(getCookie("cname")).css('color','black')
@@ -167,7 +167,7 @@ brd=((x)=>{
 					content:$('#write_form textarea').val()
 				}
 			$.ajax({
-			url:_+'/articles/',
+			url:'/web/articles/',
 			type:'PUT',
 			dataType:'json',
 			data:JSON.stringify(data),

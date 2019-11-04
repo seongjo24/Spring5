@@ -9,7 +9,10 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.zaxxer.hikari.HikariConfig;
 
@@ -18,6 +21,8 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @ComponentScan(basePackages = {"com.hanrabong.web"})
 @MapperScan(basePackages= {"com.hanrabong.web"})
+//@EnableTransactionManagement
+//@EnableAspectJAutoProxy
 public class RootConfig {
 @Bean
 public DataSource dataSource() {
@@ -31,6 +36,8 @@ public DataSource dataSource() {
 
 	    return dataSource;
 }
-
-
+@Bean
+public DataSourceTransactionManager txManaget() {
+	return new DataSourceTransactionManager(dataSource());
+}
 }

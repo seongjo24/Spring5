@@ -15,7 +15,7 @@ navi_vue={
 		        '          <li id="logout"class="nav-item">'+
 		        '          </li>'+
 		        '          <li class="nav-item">'+
-		        '            <a class="nav-link" href="#">Profile</a>'+
+		        '            <a id="menu"class="nav-link" href="#">menu</a>'+
 		        '          </li>'+
 		        '          <li class="nav-item">'+
 		        '            <a class="nav-link" href="#">Switch account</a>'+
